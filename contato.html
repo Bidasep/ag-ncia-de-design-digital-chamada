@@ -9,53 +9,57 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-header">
-            <img src="Black and White Minimalist Barbershop Logo.png" alt="imagem header " class="img-header"
-                id="img-header" srcset="">
+    <header class="header">
+        <div class="header__container">
+            <img src="Black and White Minimalist Barbershop Logo.png" alt="imagem header " class="header__logo"
+                srcset="">
             <nav>
-                <a class="link-click" href="index.html">Home</a>
-                <a class="link-click" href="Sobrenos.html">Sobre Nós</a>
-                <a class="link-click" href="Serviços.html">Serviços</a>
-                <a class="link-click" href="Depoimentos.html">Depoimentos</a>
-                <a class="link-click" href="contato.html">Contato</a>
+                <section class="header__section">
+
+                    <a class="header__link " href="index.html">Home</a>
+                    <a class="header__link" href="Sobrenos.html">Sobre Nós</a>
+                    <a class="header__link " href="Serviços.html">Serviços</a>
+                    <a class="header__link " href="Depoimentos.html">Depoimentos</a>
+                    <a class="header__link header__link--active" href="contato.html">Contato</a>
+                </section>
             </nav>
         </div>
     </header>
 
 
+
     <main class="main-contato">
-        <div class="container-contato">
-            
-                <h3>Entre em contato </h3>
-                <form class ="form-contato">
-                    <label for="Nome">Nome</label><br>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required><br>
-                    
+        <div class="main-contato__container">
 
-                    <label for="email">E-mail</label> <br>
-                    <input type="email" id="email" name="email " placeholder="Digite seu E-mail" required>
-                    <br>
+            <h3>Entre em contato </h3>
+            <form class="main-contato__form">
+                <label for="Nome">Nome</label><br>
+                <input class="main-contato__input" type="text" id="nome" name="nome" placeholder="Digite seu Nome" required><br>
 
-                    <label for="mensagem">Mensagem:</label> <br>
-                    <textarea  name="mensagem" id="msg"  cols= "50"  rows="20" placeholder="Digite aqui">
-                    </textarea>
-                    <br>
 
-                    <button type="submit" id="enviar">Enviar</button>
-                </form>
-            
-             
+                <label for="email">E-mail</label> <br>
+                <input class="main-contato__input" type="email" id="email" name="email " placeholder="Digite seu E-mail" required>
+                <br>
+
+                <label for="mensagem">Mensagem:</label> <br>
+                <textarea name="mensagem" class="main-contato__textarea" cols="50" rows="20" placeholder="Digite aqui">
+                </textarea>
+                <br>
+
+                <button class="botao botao--primario" type="submit" id="enviar">Enviar</button>
+            </form>
+
+
         </div>
     </main>
 
 
     <!-- Rodapé-->
-    <footer>
-        <p class="footer">Conecte-se com a gente</p>
-        <a href="">Linkedin</a> ||
-        <a href="">GitHub</a>
-        <p class="footer"> &copy; 2026 Bida Barbershop - todos os direitos reservados</p>
+    <footer class="footer">
+        <p class="footer__paragrafo">Conecte-se com a gente</p>
+        <a class="footer__link">Linkedin</a> ||
+        <a class="footer__link">GitHub</a>
+        <p class="footer__paragrafo"> &copy; 2026 Bida Barbershop - todos os direitos reservados</p>
 
     </footer>
 
