@@ -9,45 +9,47 @@ body {
     background-color: aqua;
 }
 
+
+/* HEADER SETTINGS*/
+
+.header__link--active {
+    text-decoration: underline;
+    
+}
+
+
+
 header {
     background-color: black;
     border-radius: 5px;
 }
 
-.container-header {
+.header__container {
     background-color: black;
     display: flex;
     max-width: 100vw;
     align-items: center;
-    
+
     justify-content: space-around;
     margin: 10px;
 }
 
-/*nav {
-    color: white;
-    display: flex;
-    height: auto;
-    gap: 30px;
-    align-items: center;
-}
-*/
-.section-header {
+.header__section {
     display: flex;
     color: white;
     height: auto;
     gap: 10px;
     align-items: center;
 
-    
+
 }
 
-.img-header {
+.header__logo {
     width: 20%;
     height: auto;
 }
 
-a {
+.header__link {
     text-decoration: none;
     color: white;
     font-size: 2.0em;
@@ -62,7 +64,36 @@ a:hover {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-.image-main {
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*FOOTER */
+
+footer {
+    text-align: center;
+    align-items: flex-end;
+    background-color: black;
+
+}
+
+.footer__paragrafo {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: white;
+    font-size: 2.0em;
+    margin: 20px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+/* INDEX/HOME */
+
+.main-image {
     max-width: 100vw;
     max-height: 100vh;
     justify-content: center;
@@ -70,14 +101,15 @@ a:hover {
 
 }
 
-
-
-.container-main {
+.main-container {
     max-width: 100vw;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
+/*--------------------------------------------------------------------------------------------------------*/
+
 
 .container-main p {
 
@@ -89,36 +121,24 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 
-footer {
-    text-align: center;
-    align-items: flex-end;
-    background-color: black;
-
-}
-
-footer p {
-    text-align: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.9em;
-
-
-}
 
 main div main {
     grid-area: main;
     text-align: center;
     background-color: aqua;
 }
+/* ------------------------------------------------------------------------------*/
 
-.container-main-Sobrenos {
+/*SOBRENOS*/
+
+.main-Sobrenos__container {
     display: flex;
     flex-direction: column;
 
     margin: 30px;
 }
 
-.container-main-Sobrenos p {
+.main-sobrenos__paragrafo {
     background-color: rgba(204, 255, 255, 0, 7);
     text-align: center;
     display: flex;
@@ -132,7 +152,11 @@ main div main {
 
 }
 
-.container-main-serviços {
+/*-----------------------------------------------------------------------------------*/
+
+/* SERVIÇOS */ 
+
+.main-serviços__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -149,7 +173,7 @@ main div main {
         "main main ";
 }
 
-.container-main-serviços p {
+.main-servicos__paragrafo{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -158,7 +182,7 @@ main div main {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
 }
 
-.imagem-servicos {
+.main-servicos__imagem {
     display: flex;
     border-radius: 50px;
     border: 3px;
@@ -170,16 +194,16 @@ main div main {
 
 /*DEPOIMENTOS*/
 
-h1 {
+.main-depoimentos__cabecalho {
     text-align: center;
-    text-transform: uppercase;   
-    box-shadow: 0px 5px 5px 5px rgba(255, 255, 255, 0.5); 
+    text-transform: uppercase;
+    box-shadow: 0px 5px 5px 5px rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     font-size: 3em;
     margin: 100px;
 }
 
-.container-main-comentários {
+.main-depoimentos__container {
     justify-content: center;
     max-width: 100vw;
     display: flex;
@@ -187,8 +211,8 @@ h1 {
     font-size: 2em;
 }
 
-.comentarios {
-    background-color:rgba(6, 131, 255 ,0.2 ) ;
+.main-depoimentos__paragrafo {
+    background-color: rgba(6, 131, 255, 0.2);
     font-style: italic;
     text-align: center;
     max-width: 25%;
@@ -212,11 +236,12 @@ h3 {
     font-size: 2em;
     text-transform: uppercase;
 }
-.container-contato {
+
+.main-contato__container {
     margin: 150px;
     max-width: 80%;
     max-height: 80%;
-    background-color:rgba(6, 131, 255 ,0.2 );
+    background-color: rgba(6, 131, 255, 0.2);
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -224,14 +249,15 @@ h3 {
     text-align: center;
 
 }
-.form-contato {
+
+.main-contato__form{
     font-size: 1.4em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-input {
+.main-contato__input {
     font-size: 1.1rem;
     width: 80%;
     height: 20%;
@@ -240,7 +266,8 @@ input {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
 }
-textarea {
+
+.main-contato__textarea {
     width: 80%;
     height: 80%;
     background-color: aqua;
@@ -248,7 +275,7 @@ textarea {
     border-radius: 10px;
 }
 
-button {
+.botao--primario {
     font-size: 1.5em;
     background-color: green;
     border-radius: 5px;
@@ -256,18 +283,21 @@ button {
     height: 20%;
     margin: 0px 0px 10px 0px;
 }
-button:hover {
+
+.botao--primario:hover {
     transform: scale(1.08);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
+
 /*Configuração para display medio/ pequeno*/
 
 @media (max-width : 768px) {
 
 
 
-    /* CONFIGURAÇÃO HEADER E NAV */
-    .container-header {
+    /* CONFIGURAÇÃO HEADER  */
+
+    .header__container {
         margin: 8 5px 0;
         display: flex;
         max-width: 100vw;
@@ -279,7 +309,7 @@ button:hover {
 
     }
 
-    .img-header {
+    .header__logo {
         max-width: 100%;
         height: 100%;
         justify-content: center;
@@ -300,14 +330,16 @@ button:hover {
         font-size: 0.9em;
     }
 
-    footer {
+    /*  configuração FOOTER */
+
+    .footer {
         grid-area: footer;
         text-align: center;
         background-color: black;
     }
 
 
-    .container-main-serviços p {
+    .main-servicos__paragrafo {
         display: flex;
         text-align: center;
         justify-content: center;
@@ -316,7 +348,7 @@ button:hover {
         box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
     }
 
-    .imagem-servicos {
+    .main-servicos__imagem {
         display: flex;
         border-radius: 50px;
         border-style: solid;
@@ -327,13 +359,13 @@ button:hover {
     }
 
     /*COMENTÁRIOS*/
-    .container-main-comentários {
+    .main-depoimentos__container {
         justify-content: center;
         max-width: 100vw;
         display: inline-block;
     }
 
-    .comentarios {
+    .main-depoimentos__paragrafo {
         max-width: 100%;
         margin: 10px;
         padding: 20px;
@@ -345,4 +377,10 @@ button:hover {
 
 
 
+}
+
+.header__link--active {
+    text-decoration: underline;
+    text-decoration: color(0, 255, 255, 0.5);
+    
 }
