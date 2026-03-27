@@ -1,105 +1,81 @@
-* {
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+@import 'mixins';
 
-}
+/*_layout.scss (estrutura geral da página)*/
 
-body {
-    background-color: aqua;
-}
-
-
-/* HEADER SETTINGS*/
-
-.header__link--active {
-    text-decoration: underline;
-    
-}
-
-
-
+/* HEADER */
 .header {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
+    
+    &__container {
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        max-width: 100vw;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px;
+        
+    }
+    
+    &__section {
+        display: flex;
+        color: white;
+        height: auto;
+        align-items: center;
+        
+        
+    }
+    
+    &__logo {
+        width: 20%;
+        height: auto;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 2.0em;
+        margin: 20px;
+        
+        /*&:hover {
+            border-radius: 5px;
+            background-color: aqua;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }*/
+    }
+    
+    &__link--active {
+        text-decoration: underline;
+        
+    }
 }
-
-.header__container {
-    background-color: black;
-    display: flex;
-    max-width: 100vw;
-    align-items: center;
-
-    justify-content: space-around;
-    margin: 10px;
-}
-
-.header__section {
-    display: flex;
-    color: white;
-    height: auto;
-    gap: 10px;
-    align-items: center;
-
-
-}
-
-.header__logo {
-    width: 20%;
-    height: auto;
-}
-
-.header__link {
-    text-decoration: none;
-    color: white;
-    font-size: 2.0em;
-    margin: 20px;
-
-}
-
-a:hover {
-    border-radius: 5px;
-    background-color: aqua;
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-}
-
-/*-------------------------------------------------------------------------------------------------------------------*/
+   
 
 /*FOOTER */
 
-footer {
+.footer {
     text-align: center;
     align-items: flex-end;
     background-color: black;
 
+    
+    &__paragrafo {
+        text-align: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.8em;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 2.0em;
+        margin: 20px;
+    }
 }
 
-.footer__paragrafo {
-    text-align: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.8em;
-}
-
-.footer__link {
-    text-decoration: none;
-    color: white;
-    font-size: 2.0em;
-    margin: 20px;
-}
-
-/*---------------------------------------------------------------------------------------------------------------------*/
-
-/* INDEX/HOME */
-
-.main-image {
-    max-width: 100vw;
-    max-height: 100vh;
-    justify-content: center;
-
-
-}
+/*MAIN*/
 
 .main-container {
     max-width: 100vw;
@@ -108,38 +84,15 @@ footer {
     flex-direction: column;
 }
 
-/*--------------------------------------------------------------------------------------------------------*/
-
-/*
-.container-main p {
-
-    position: absolute;
-    color: rgba(255, 255, 255, 0.9);
-    top: 50%;
-    left: 50%;
-    font-size: 1.8em;
-    transform: translate(-50%, -50%);
-}
-
-
-main div main {
-    grid-area: main;
-    text-align: center;
-    background-color: aqua;
-}
-/* ------------------------------------------------------------------------------*/
-
 /*SOBRENOS*/
 
 .main-Sobrenos__container {
     display: flex;
     flex-direction: column;
-
     margin: 30px;
 }
-
 .main-sobrenos__paragrafo {
-    background-color: rgba(204, 255, 255, 0, 7);
+    background-color:rgba(204, 255, 255, 0.4);
     text-align: center;
     display: flex;
     font-size: 1.8em;
@@ -149,12 +102,9 @@ main div main {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
     margin: 10 auto;
     padding: 50px 0 50px;
-
 }
 
-/*-----------------------------------------------------------------------------------*/
-
-/* SERVIÇOS */ 
+/* SERVIÇOS */
 
 .main-serviços__container {
     display: grid;
@@ -173,23 +123,21 @@ main div main {
         "main main ";
 }
 
-.main-servicos__paragrafo{
+.main-servicos__paragrafo {
     display: flex;
     text-align: center;
     justify-content: center;
+    @include fonte-bold;
     font-size: 3em;
     max-width: 100%;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
 }
 
 .main-servicos__imagem {
+    @include borda-arredondada;
     display: flex;
-    border-radius: 50px;
-    border: 3px;
     padding: 0px;
-    border-style: solid;
-    border-color: rgb(255, 153, 153);
-    max-width: 100%;
+    max-width: 70%;
 }
 
 /*DEPOIMENTOS*/
@@ -229,64 +177,52 @@ main div main {
 .main-contato {
     display: flex;
     justify-content: center;
-}
 
-h3 {
-    margin: 20px;
-    font-size: 2em;
-    text-transform: uppercase;
-}
+    h3 {
+        margin: 20px;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
 
-.main-contato__container {
-    margin: 150px;
-    max-width: 80%;
-    max-height: 80%;
-    background-color: rgba(6, 131, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    justify-content: center;
-    text-align: center;
+    &__container {
+        margin: 150px;
+        max-width: 80%;
+        max-height: 80%;
+        background-color: rgba(6, 131, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+        @include borda-arredondada;
+        justify-content: center;
+        text-align: center;
 
-}
+    }
 
-.main-contato__form{
-    font-size: 1.4em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    &__form {
+        font-size: 1.4em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.main-contato__input {
-    font-size: 1.1rem;
-    width: 80%;
-    height: 20%;
-    text-align: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-}
+    &__input {
+        font-size: 1.1rem;
+        width: 80%;
+        height: 20%;
+        text-align: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+    }
 
-.main-contato__textarea {
-    width: 80%;
-    height: 80%;
-    background-color: aqua;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-}
+    &__textarea {
+        width: 80%;
+        height: 80%;
+        background-color: aqua;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+    }
 
-.botao--primario {
-    font-size: 1.5em;
-    background-color: green;
-    border-radius: 5px;
-    width: 40%;
-    height: 20%;
-    margin: 0px 0px 10px 0px;
-}
 
-.botao--primario:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 /*Configuração para display medio/ pequeno*/
@@ -377,10 +313,4 @@ h3 {
 
 
 
-}
-
-.header__link--active {
-    text-decoration: underline;
-    text-decoration: color(0, 255, 255, 0.5);
-    
 }

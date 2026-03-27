@@ -1,0 +1,21 @@
+
+
+/*_base.scss (estilos base como body, tipografia, reset)*/
+
+@import 'variaveis';
+
+
+
+body {
+    background-color: $primary-color;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*RESET CSS*/
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
