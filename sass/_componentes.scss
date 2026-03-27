@@ -1,0 +1,32 @@
+/*_componentes.scss (componentes como botões, cards, menus, etc.)*/
+a:hover {
+    border-radius: 5px;
+    background-color: aqua;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.link--active {
+    text-decoration: underline;
+    color: white;
+}
+
+.main-image {
+    max-width: 100vw;
+    max-height: 100vh;
+    justify-content: center;
+}
+
+.botao--primario {
+    font-size: 1.5em;
+    background-color: green;
+    border-radius: 5px;
+    width: 40%;
+    height: 20%;
+    margin: 0px 0px 10px 0px;
+
+    &:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+}

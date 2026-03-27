@@ -1,0 +1,4 @@
+1 - passo criar o arquivo estilo.sass na pasta sass
+2 - criar a pasta css
+3 - copilar o arquvo origem:destino 
+    sass sass/estilos.scss:css/estilos.css

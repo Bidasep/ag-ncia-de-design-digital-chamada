@@ -1,0 +1,19 @@
+/*_mixins.scss (estilos reutilizáveis)*/
+
+
+ /* padrão fundo link*/
+
+
+@mixin borda-arredondada{
+    border-radius: 50px;
+    border: 3px;
+    border-style: solid;
+    border-color: rgb(255, 67, 67);
+    
+}
+
+@mixin fonte-bold {
+    color: black;
+    font-weight: bold;
+}
+    
